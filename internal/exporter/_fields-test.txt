@@ -1,0 +1,347 @@
+List of valid properties to query for the switch query-apu:
+
+"timestamp"
+The timestamp of when the query was made in format timestamp.
+
+"board_index"
+Zero based index of the APU board. Can change at each boot.
+
+"name"
+the product name of the APU board.
+
+"product_number"
+the product number of the APU board.
+
+"driver_version"
+The version of the installed LYNXI display driver. This is an alphanumeric string.
+
+"firmware_version"
+The version of the installed LYNXI display firmware driver.
+
+"serial_number"
+This number matches the serial number physically printed on each board. It is a globally unique immutable alphanumeric value.
+
+"chip_count"
+The number of LYNXI APUs in the system.
+
+"chip_id.chip0"
+This value is the globally unique immutable alphanumeric identifier of the APU0
+
+"chip_id.chip1"
+This value is the globally unique immutable alphanumeric identifier of the APU1
+
+"chip_id.chip2"
+This value is the globally unique immutable alphanumeric identifier of the APU2
+
+"uuid.chip0"
+This value is the globally unique immutable alphanumeric identifier of the APU0. It does not correspond to any physical label on the board.
+
+"uuid.chip1"
+This value is the globally unique immutable alphanumeric identifier of the APU1. It does not correspond to any physical label on the board.
+
+"uuid.chip2"
+This value is the globally unique immutable alphanumeric identifier of the APU2. It does not correspond to any physical label on the board.
+
+"chip_index.chip0"
+Zero based index of the APU0. Can change at each boot.
+
+"chip_index.chip1"
+Zero based index of the APU1. Can change at each boot.
+
+"chip_index.chip2"
+Zero based index of the APU2. Can change at each boot.
+
+"utilization.apu.total"
+Percent of time over the past sample period during which global (device) apu was being read or written.
+
+"utilization.apu.chip0"
+Percent of time over the past sample period during which global (APU0) apu was being read or written.
+
+"utilization.apu.chip1"
+Percent of time over the past sample period during which global (APU1) apu was being read or written.
+
+"utilization.apu.chip2"
+Percent of time over the past sample period during which global (APU2) apu was being read or written.
+
+"utilization.cpu.total"
+Percent of time over the past sample period during which global (device) cpu was being read or written.
+
+"utilization.cpu.chip0"
+Percent of time over the past sample period during which global (APU0) cpu was being read or written.
+
+"utilization.cpu.chip1"
+Percent of time over the past sample period during which global (APU1) cpu was being read or written.
+
+"utilization.cpu.chip2"
+Percent of time over the past sample period during which global (APU2) cpu was being read or written.
+
+"utilization.vic.total"
+Percent of time over the past sample period during which global (device) vic was being read or written.
+
+"utilization.vic.chip0"
+Percent of time over the past sample period during which global (APU0) vic was being read or written.
+
+"utilization.vic.chip1"
+Percent of time over the past sample period during which global (APU1) vic was being read or written.
+
+"utilization.vic.chip2"
+Percent of time over the past sample period during which global (APU2) vic was being read or written.
+
+"utilization.memory.total"
+Percent of time over the past sample period during which global (device) memory was being read or written.
+
+"utilization.memory.chip0"
+Percent of time over the past sample period during which global (APU0) memory was being read or written.
+
+"utilization.memory.chip1"
+Percent of time over the past sample period during which global (APU1) memory was being read or written.
+
+"utilization.memory.chip2"
+Percent of time over the past sample period during which global (APU2) memory was being read or written.
+
+"utilization.ipeFps.total"
+Percent of time over the past sample period during which global (device) ipe was being read or written.
+
+"utilization.ipeFps.chip0"
+Percent of time over the past sample period during which global (APU0) ipe was being read or written.
+
+"utilization.ipeFps.chip1"
+Percent of time over the past sample period during which global (APU1) ipe was being read or written.
+
+"utilization.ipeFps.chip2"
+Percent of time over the past sample period during which global (APU2) ipe was being read or written.
+
+"pci.sub_vendor_id.chip0"
+pci.sub_vendor_id.chip0, in hex.
+
+"pci.sub_vendor_id.chip1"
+pci.sub_vendor_id.chip1, in hex.
+
+"pci.sub_vendor_id.chip2"
+pci.sub_vendor_id.chip2, in hex.
+
+"pci.vendor_id.chip0"
+pci.vendor_id.chip0, in hex.
+
+"pci.vendor_id.chip1"
+pci.vendor_id.chip1, in hex.
+
+"pci.vendor_id.chip2"
+pci.vendor_id.chip2, in hex.
+
+"pci.bus.chip0"
+pci.bus.chip0 , in hex.
+
+"pci.bus.chip1"
+pci.bus.chip1, in hex.
+
+"pci.bus.chip2"
+pci.bus.chip2, in hex.
+
+"pci.device_id.chip0"
+pci.device_id.chip0, in hex.
+
+"pci.device_id.chip1"
+pci.device_id.chip1, in hex.
+
+"pci.device_id.chip2"
+pci.device_id.chip2, in hex.
+
+"pci.sub_device_id.chip0"
+pci.sub_device_id.chip0, in hex.
+
+"pci.sub_device_id.chip1"
+pci.sub_device_id.chip1, in hex.
+
+"pci.sub_device_id.chip2"
+pci.sub_device_id.chip2, in hex.
+
+"pci.device.chip0"
+pci.device.chip0, in hex.
+
+"pci.device.chip1"
+pci.device.chip1, in hex.
+
+"pci.device.chip2"
+pci.device.chip2, in hex.
+
+"pci.function.chip0"
+pci.function.chip0, in hex.
+
+"pci.function.chip1"
+pci.function.chip1, in hex.
+
+"pci.function.chip2"
+pci.function.chip2, in hex.
+
+"pci.numa.node_id.chip0"
+pci.numa.node_id.chip0.
+
+"pci.numa.node_id.chip1"
+pci.numa.node_id.chip1.
+
+"pci.numa.node_id.chip2"
+pci.numa.node_id.chip2.
+
+"pci.numa.cpu.chip0"
+pci.numa.cpu.chip0.
+
+"pci.numa.cpu.chip1"
+pci.numa.cpu.chip1.
+
+"pci.numa.cpu.chip2"
+pci.numa.cpu.chip2.
+
+"pcie.link.speed.max.chip0"
+The maximum PCI-E link width possible with this APU and system configuration. For example, if the APU supports a higher PCIe generation than the system supports then this reports the system PCIe generation.
+
+"pcie.link.speed.max.chip1"
+The maximum PCI-E link width possible with this APU and system configuration. For example, if the APU supports a higher PCIe generation than the system supports then this reports the system PCIe generation.
+
+"pcie.link.speed.max.chip2"
+pThe maximum PCI-E link width possible with this APU and system configuration. For example, if the APU supports a higher PCIe generation than the system supports then this reports the system PCIe generation.
+
+"pcie.link.speed.current.chip0"
+The current PCI-E link width. These may be reduced when the APU is not in use.
+
+"pcie.link.speed.current.chip1"
+The current PCI-E link width. These may be reduced when the APU is not in use.
+
+"pcie.link.speed.current.chip2"
+The current PCI-E link width. These may be reduced when the APU is not in use.
+
+"pcie.link.gen.max.chip0"
+The maximum PCI-E link generation possible with this APU and system configuration. For example, if the APU supports a higher PCIe generation than the system supports then this reports the system PCIe generation.
+
+"pcie.link.gen.max.chip1"
+The maximum PCI-E link generation possible with this APU and system configuration. For example, if the APU supports a higher PCIe generation than the system supports then this reports the system PCIe generation.
+
+"pcie.link.gen.max.chip2"
+The maximum PCI-E link generation possible with this APU and system configuration. For example, if the APU supports a higher PCIe generation than the system supports then this reports the system PCIe generation.
+
+"pcie.link.gen.current.chip0"
+The current PCI-E link generation. These may be reduced when the APU is not in use.
+
+"pcie.link.gen.current.chip1"
+The current PCI-E link generation. These may be reduced when the APU is not in use.
+
+"pcie.link.gen.current.chip2"
+The current PCI-E link generation. These may be reduced when the APU is not in use.
+
+"fan.speed"
+Fan speed, in %.
+
+"temperature.current.chip0"
+Core APU0 temperature. in degrees C.
+
+"temperature.current.chip1"
+Core APU1 temperature. in degrees C.
+
+"temperature.current.chip2"
+Core APU2 temperature. in degrees C.
+
+"voltage.current.chip0"
+Current APU0 Voltage. in voltage V.
+
+"voltage.current.chip1"
+Current APU1 Voltage. in voltage V.
+
+"voltage.current.chip2"
+Current APU2 Voltage. in voltage V.
+
+"voltage.board.input"
+Voltage board input.
+
+"clocks.current.apu.chip0"
+Current apu frequency of APU0 clock.
+
+"clocks.current.apu.chip1"
+Current apu frequency of APU1 clock.
+
+"clocks.current.apu.chip2"
+Current apu frequency of APU2 clock.
+
+"clocks.current.cpu.chip0"
+Current cpu frequency of APU0 clock.
+
+"clocks.current.cpu.chip1"
+Current cpu frequency of APU1 clock.
+
+"clocks.current.cpu.chip2"
+Current cpu frequency of APU2 clock.
+
+"clocks.current.memory.chip0"
+Current memory frequency of APU0 clock.
+
+"clocks.current.memory.chip1"
+Current memory frequency of APU1 clock.
+
+"clocks.current.memory.chip2"
+Current memory frequency of APU2 clock.
+
+"clocks.current.apu.max.chip0"
+Current max apu frequency of APU0 clock.
+
+"clocks.current.apu.max.chip1"
+Current max apu frequency of APU1 clock.
+
+"clocks.current.apu.max.chip2"
+Current max apu frequency of APU2 clock.
+
+"clocks.current.cpu.max.chip0"
+Current max cpu frequency of APU0 clock.
+
+"clocks.current.cpu.max.chip1"
+Current max cpu frequency of APU0 clock.
+
+"clocks.current.cpu.max.chip2"
+Current max cpu frequency of APU0 clock.
+
+"clocks.current.memory.max.chip0"
+Current max memory frequency of APU0 clock.
+
+"clocks.current.memory.max.chip1"
+Current max memory frequency of APU1 clock.
+
+"clocks.current.memory.max.chip2"
+Current max memory frequency of APU2 clock.
+
+"power.draw"
+The last measured power draw for the entire board, in watts. Only available if power management is supported. This reading is accurate to within +/- 5 watts.
+
+"power.limit"
+The software power limit in watts. Set by software like nvidia-smi. On Kepler devices Power Limit can be adjusted using [-pl | --power-limit=] switches.
+
+"ecc.mode.current.chip0"
+Current Ecc mode APU0.
+
+"ecc.mode.current.chip1"
+Current Ecc mode APU1.
+
+"ecc.mode.current.chip2"
+Current Ecc mode APU2.
+
+"ecc.errors.corrected.total"
+Errors detected in global device memory.
+
+"ecc.errors.corrected.total.chip0"
+Errors detected in the APU0
+
+"ecc.errors.corrected.total.chip1"
+Errors detected in the APU1
+
+"ecc.errors.corrected.total.chip2"
+Errors detected in the APU2
+
+"ecc.errors.uncorrected.total"
+Errors detected in global device memory.
+
+"ecc.errors.uncorrected.total.chip0"
+Errors detected in the APU0.
+
+"ecc.errors.uncorrected.total.chip1"
+Errors detected in the APU1.
+
+"ecc.errors.uncorrected.total.chip2"
+Errors detected in the APU2.
+

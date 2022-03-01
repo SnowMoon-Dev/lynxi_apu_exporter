@@ -35,6 +35,7 @@ var (
 		{qField: serialNumberQField, label: "serial_number"},
 		{qField: chipCountQField, label: "chip_count"},
 		{qField: driverVersionQField, label: "driver_version"},
+		{qField: firmwareVersionQField, label: "firmware_version"},
 	}
 
 	runCmd = func(cmd *exec.Cmd) error { return cmd.Run() }
@@ -134,10 +135,10 @@ func (e *gpuExporter) Collect(ch chan<- prometheus.Metric) {
 		serialNumber := r.qFieldToCells[serialNumberQField].rawValue
 		chipCount := r.qFieldToCells[chipCountQField].rawValue
 		driverVersion := r.qFieldToCells[driverVersionQField].rawValue
-
+		firmwareVersion := r.qFieldToCells[firmwareVersionQField].rawValue
 		infoMetric := prometheus.MustNewConstMetric(e.apuInfoDesc, prometheus.GaugeValue,
 			1, name, boardIndex, productNumber,
-			serialNumber, chipCount, driverVersion)
+			serialNumber, chipCount, driverVersion, firmwareVersion)
 		ch <- infoMetric
 		for _, c := range r.cells {
 			mi := e.qFieldToMetricInfoMap[c.qField]
@@ -147,7 +148,7 @@ func (e *gpuExporter) Collect(ch chan<- prometheus.Metric) {
 					c.qField, "raw_value", c.rawValue)
 				continue
 			}
-			ch <- prometheus.MustNewConstMetric(mi.desc, mi.mType, num, name, boardIndex, serialNumber)
+			ch <- prometheus.MustNewConstMetric(mi.desc, mi.mType, num, name, boardIndex, serialNumber, firmwareVersion)
 		}
 	}
 }
@@ -366,7 +367,7 @@ func buildQFieldToMetricInfoMap(prefix string, qFieldToRFieldMap map[qField]rFie
 
 func buildMetricInfo(prefix string, rField rField) MetricInfo {
 	fqName, multiplier := buildFQNameAndMultiplier(prefix, rField)
-	desc := prometheus.NewDesc(fqName, string(rField), []string{"name", "board_index", "serial_number"}, nil)
+	desc := prometheus.NewDesc(fqName, string(rField), []string{"name", "board_index", "serial_number", "firmware_version"}, nil)
 	return MetricInfo{
 		desc:            desc,
 		mType:           prometheus.GaugeValue,

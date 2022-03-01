@@ -5,14 +5,15 @@ import (
 )
 
 const (
-	nameQField          qField = "name"
-	boardIndexQField    qField = "board_index"
-	productNumberQField qField = "product_number"
-	serialNumberQField  qField = "serial_number"
-	chipCountQField     qField = "chip_count"
-	driverVersionQField qField = "driver_version"
-	qFieldsAuto                = "AUTO"
-	DefaultQField              = qFieldsAuto
+	nameQField            qField = "name"
+	boardIndexQField      qField = "board_index"
+	productNumberQField   qField = "product_number"
+	serialNumberQField    qField = "serial_number"
+	chipCountQField       qField = "chip_count"
+	driverVersionQField   qField = "driver_version"
+	firmwareVersionQField qField = "firmware_version"
+	qFieldsAuto                  = "AUTO"
+	DefaultQField                = qFieldsAuto
 )
 
 const (
